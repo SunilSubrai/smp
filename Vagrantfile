@@ -8,9 +8,16 @@ Vagrant.configure("2") do |config|
   
 	config.vm.provision :chef_solo do |chef|
 		chef.cookbooks_path = "cookbooks"
+		chef.add_recipe "openssl"
 		chef.add_recipe "apache2"
+		chef.add_recipe "mysql"
 		chef.add_recipe "mysql::server"
 		chef.add_recipe "php"
+		chef.add_recipe "php::module_apc"
+		chef.add_recipe "php::module_curl"
+		chef.add_recipe "php::module_mysql"
+		chef.add_recipe "apache2::mod_php5"
+		chef.add_recipe "apache2::mod_rewrite"
 		chef.json = {
 			"mysql" => {
 				"server_root_password" => "hello",

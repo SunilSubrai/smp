@@ -1,4 +1,4 @@
-<VirtualHost *>
+﻿<VirtualHost *>
         ServerAdmin developer@omobono.com
         ServerName  smp.omodev.local
         ServerAlias www.smp.omodev.local
