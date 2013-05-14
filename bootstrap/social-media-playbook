@@ -1,0 +1,18 @@
+<VirtualHost *>
+        ServerAdmin developer@omobono.com
+        ServerName  smp.omodev.local
+        ServerAlias www.smp.omodev.local
+
+        # Indexes + Directory Root.
+        DirectoryIndex index.html
+        DocumentRoot /vagrant/
+
+        <Location /cgi-bin>
+                Options +ExecCGI
+        </Location>
+
+
+        # Logfiles
+        ErrorLog  /logs/error.log
+        CustomLog /logs/access.log combined
+</VirtualHost>

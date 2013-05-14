@@ -1,0 +1,10 @@
+for live:-
+
+root ieCheejea9iesho4Tielaex0oB6pei3e
+mysql root sheeDe5Eesh1saitoh1Rien0oi2wie0u
+ssl cert daith5Gee4ohng7teingae6toongohsh
+wordpress admin vah5enui1oz6eiS9eivopah1udaen6ae
+
+for dev
+mysql root hello
+
