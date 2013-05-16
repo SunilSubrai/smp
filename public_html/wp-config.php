@@ -16,10 +16,10 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'social-media-playbook');
+define('DB_NAME', 'accenture_smp');
 
 /** MySQL database username */
-define('DB_USER', 'social-media-playbook');
+define('DB_USER', 'accenture_smp');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'aiPeoth1AiZe4da1');
