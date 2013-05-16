@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Navigation (Template 1)
+Template Name: Navigation Article (Template 2)
 */		
 ?>
 <?php get_header() ?>
@@ -10,9 +10,14 @@ Template Name: Navigation (Template 1)
 			<div id="menu-instructions"><?php echo strip_tags(get_post(26)->post_content, "<a>"); ?></div>
 		</div>
 
-		<div id="header-container">
-			<div id="welcome-message">
-				<h1><?php echo strip_tags(get_post(28)->post_content, "<h1><br>"); ?></h1>
+		<div class="chapter-header" id="header-container">
+			<div id="chapter-message">
+				<?php 
+					//assuming we are using chapter where it breaks at :
+					$x = explode(":", $post->post_title);
+				?>
+				<h2><?php echo trim($x[0]); ?>:</h2>
+				<h1><?php echo trim($x[1]); ?></h1>
 				<?php
 					$pdf = (object) return_pdf();
 				?>
@@ -49,12 +54,12 @@ Template Name: Navigation (Template 1)
 				<div class="content">
 
 					<div class="chapters-pointer">
-						<img src="<?php echo image_url(); ?>/chapters-pointer_1024.png" />
+						<img src="<?php echo image_url(); ?>/articles-pointer_1024.png" />
 					</div>
 
-				<div class="chapters-block">
+				<div class="chapters-block">	
 
-				<?php foreach(get_pages("sort_column=menu_order&exclude=5&hierarchical=0&parent=0") as $chapter) : ?>
+				<?php foreach(get_pages("sort_column=menu_order&exclude=5&hierarchical=0&parent=$post->ID") as $chapter) : ?>
 					<div class="chapter">
 						<div class="thumb">
 							<div class="new">
@@ -63,7 +68,7 @@ Template Name: Navigation (Template 1)
 							<img src="<?php echo image_url(); ?>/thumb-placeholder.jpg" />
 						</div>
 						<div class="description">
-							<h3><a href="#"><?php $x = explode(":", $chapter->post_title); echo trim($x[1]); ?></a></h3>
+							<h3><a href="#"><?php echo $chapter->post_title; ?></a></h3>
 							<p>
 								<?php echo $chapter->post_excerpt ?>
 							</p>
