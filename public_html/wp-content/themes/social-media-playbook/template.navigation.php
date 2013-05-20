@@ -4,11 +4,7 @@ Template Name: Navigation (Template 1)
 */		
 ?>
 <?php get_header() ?>
-		<div id="menu-container">
-			<a id="menu-button" href="#" title="menu">
-			</a>
-			<div id="menu-instructions"><?php echo strip_tags(get_post(26)->post_content, "<a>"); ?></div>
-		</div>
+		<?php include "includes/include.menu.php"; ?>
 
 		<div id="header-container">
 			<div id="welcome-message">
@@ -54,7 +50,7 @@ Template Name: Navigation (Template 1)
 
 				<div class="chapters-block">
 
-				<?php foreach(get_pages("sort_column=menu_order&exclude=5&hierarchical=0&parent=0") as $chapter) : ?>
+				<?php foreach(get_pages("sort_column=menu_order&exclude=8&hierarchical=0&parent=0") as $chapter) : ?>
 					<div class="chapter">
 						<div class="thumb">
 							<div class="new">

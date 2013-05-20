@@ -47,6 +47,28 @@
 		return $pdf;	
 	}
 
+	function return_next_prev_pages(){
+		$pagelist = get_pages('sort_column=menu_order&sort_order=asc');
+		$pages = array();
+		foreach ($pagelist as $page) {
+		   $pages[] += $page->ID;
+		}
+
+		$current = array_search(get_the_ID(), $pages);
+		$prevID = $pages[$current-1];
+		$nextID = $pages[$current+1];		
+
+		return (object) array("next" => $nextID, "prev" => $prevID);
+	}
+
+	function next_page(){
+		return return_next_prev_pages()->next;
+	}
+
+	function prev_page(){
+		return return_next_prev_pages()->prev;
+	}
+
 	//post types
 	add_action( 'init', 'create_post_type_miscellaneous' );
 	function create_post_type_miscellaneous() {
