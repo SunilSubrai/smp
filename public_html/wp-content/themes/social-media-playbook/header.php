@@ -4,13 +4,19 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri()."/style.css"; ?>" />
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri()."/js/jquery-1.7.2.min.js" ?>"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri()."/js/jquery.watermark.min.js" ?>"></script>	
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri()."/js/core.js" ?>"></script>
+	<!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()."/stylesheet/ie7.css" ?>">
+	<![endif]-->
 </head>
 <body <?php body_class(body_classes()) ?> id="page-body-id-<?php echo $post->ID ?>">
 	<div id="main-container">
 		<div id="menu" class="slide menu">	
 			<img src="<?php echo image_url(); ?>/menu-banner.jpg" alt="Accenture" height="113" width="311" />
 			<p class="menu-intro">Use this menu to navigate Chapters and Articles</p>
-			<a id="menu-close" href="#" title="Close menu"></a>
+			<a id="menu-close" class="button-a" href="#"><span class="arrow">l</span>Close</a>
 			<nav>
 				<ul>
 				<?php 
@@ -40,11 +46,10 @@
 				<?php endforeach; ?>
 				</ul>
 			</nav>
-			<a id="download-full-pdf-button" href="" title="Download Full PDF ()"><img src="<?php echo image_url(); ?>/download-full-pdf-button_1024.png"></a>
+			<a class="button-b download-full-pdf-button" href="" title="()"><span class="arrow">r</span><span class="label">Download Full PDF</span></a>
 		</div><!-- end div.menu -->
 		<div id="banner">
 			<img id="desktop-banner" src="<?php echo image_url(); ?>/banner_1024.png" border="0">
 			<img id="mobile-banner" src="<?php echo image_url(); ?>/banner_320.png" border="0">
 		</div>
-
 

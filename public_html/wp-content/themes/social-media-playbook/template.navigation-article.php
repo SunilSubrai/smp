@@ -8,12 +8,7 @@ Template Name: Navigation Article (Template 2)
 
 		<div class="chapter-header" id="header-container">
 			<?php include "includes/include.chapter-message.php" ?>
-			<?php
-				$responsive = new responsive_meta();
-				$header_image = $responsive->return_images("page_heading_image");
-			?>
-			<img id="desktop-welcome-image" src="<?php echo $header_image->big ?>" border="0" />
-			<img id="mobile-welcome-image" src="<?php echo $header_image->mobile ?>" border="0" />
+			
 		</div>
 
 		<div class="two-column one-two">

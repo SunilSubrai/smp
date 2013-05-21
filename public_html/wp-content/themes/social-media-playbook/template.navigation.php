@@ -12,7 +12,8 @@ Template Name: Navigation (Template 1)
 				<?php
 					$pdf = (object) return_pdf();
 				?>
-				<a id="download-full-pdf-button" href="<?php echo $pdf->url ?>" title="Download Full PDF (<?php echo $pdf->title; ?>)"><img src="<?php echo image_url(); ?>/download-full-pdf-button_1024.png" border="0" /></a>
+				<!-- <a id="download-full-pdf-button" href="<?php echo $pdf->url ?>" title="Download Full PDF (<?php echo $pdf->title; ?>)"><img src="<?php echo image_url(); ?>/download-full-pdf-button_1024.png" border="0" /></a> -->
+				<a class="button-b download-full-pdf-button" href="<?php echo $pdf->url ?>" title="(<?php echo $pdf->title; ?>)"><span class="arrow">r</span><span class="label">Download Full PDF</span></a>
 			</div>
 			<?php
 				$responsive = new responsive_meta();
@@ -24,13 +25,12 @@ Template Name: Navigation (Template 1)
 
 		<div class="two-column one-two">
 
-
 			<div class="column-one">
 
 				<div class="content">
 
-					<div class="the-social-media-playbook-pointer">
-						<img src="<?php echo image_url(); ?>/the-social-media-playbook-pointer_1024.png" />
+					<div class="the-social-media-playbook-pointer pointer-a">
+						<div class="label">The Social Media Playbook</div>
 					</div>
 
 					<?php echo apply_filters("the_content", $post->post_content); ?>
@@ -44,8 +44,8 @@ Template Name: Navigation (Template 1)
 
 				<div class="content">
 
-					<div class="chapters-pointer">
-						<img src="<?php echo image_url(); ?>/chapters-pointer_1024.png" />
+					<div class="chapters-pointer pointer-b">
+						<div class="label">Chapters</div>
 					</div>
 
 				<div class="chapters-block">
@@ -64,9 +64,8 @@ Template Name: Navigation (Template 1)
 								<?php echo $chapter->post_excerpt ?>
 							</p>
 						</div>
-						<a class="read-button" href="<?php echo get_permalink($chapter->ID); ?>">
-							<img src="<?php echo image_url(); ?>/read-button_1024.png" border="0" />
-							</a>
+						<a class="button-a read-button" href="<?php echo get_permalink($chapter->ID); ?>">
+							<span class="arrow">r</span><span class="label">Read</span>
 						</a>
 						<div class="line"></div>
 					</div>
