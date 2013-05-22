@@ -106,6 +106,10 @@ nav {
 	z-index: 50;
 }
 
+.ie7 #wrapper, .ie8 #wrapper {
+	background: url('images/wrapper.png') repeat;
+}
+
 .display-none {
 	display: none;
 }

@@ -4,6 +4,7 @@
 		</div>
 		<div id="wrapper" class="display-none"></div>
 	<!--script-->	
+	<script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/js/modernizr.custom.05480.js"></script>
 	<script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/js/menu.js"></script>
 	</body>
 </html>
