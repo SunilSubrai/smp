@@ -6,7 +6,7 @@ $(function(){
 		$('#wrapper').toggleClass('display-none');
 	});
 
-	$('#menu-close').on('click', function(e){
+	$('#menu-close, #wrapper').on('click', function(e){
 		e.preventDefault();
 		var $menu = $('#menu');
 		var menuWidth = $menu.innerWidth();
@@ -14,10 +14,11 @@ $(function(){
 		$('#wrapper').toggleClass('display-none');
 	});
 
-	$('.menu-item').on('click', function(e){
+	$('.menu-chapter').on('click', function(e){
 		e.preventDefault();
 		var $chapter = $(this);
-		$chapter.toggleClass('menu-item-open').find('.article-list').slideToggle();
+		$chapter.parent('.menu-item').toggleClass('menu-item-open');
+		$chapter.siblings('.article-list').slideToggle();
 	});
 
 });

@@ -7,32 +7,38 @@
 #menu {
 	background-color: white;
 	height: 100%;
-	padding-left: 19px;
 	position: fixed;
 	top: 0;
-	width: 311px;
 	z-index: 100;
 }
 
 .menu {
-	left: -350px;
+	left: -1000px;
 }
 
 .menu-open {
 	left: 0;
 }
 
-#menu-close {
+.menu-content {
+	padding-left: 19px;
+	width: 311px;
 }
 
 .menu-intro {
 	display: none;
 }
 
+.menu-banner {
+	border-bottom: solid 1px black;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
 .slide {
-	-webkit-transition: all 0.7s ease-out;
-    -moz-transition: all 0.7s ease-out;
-    transition: all 0.7s ease-out;
+	-webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 .shadow {
@@ -60,7 +66,7 @@ nav {
 	border-top: solid 1px #eaeaec;
 }
 
-.menu-chapter {
+.menu-chapter a {
 	color: #2f539c;
 	font-weight: bold;
 	padding-right: 40px;
@@ -123,8 +129,13 @@ nav {
 	}
 }
 
-@media all and (max-width: 480px) {
+@media only screen and (max-device-width: 480px) {
 	#menu {
+		position: absolute;
 		width: 100%;
+	}
+
+	.menu-content {
+		width: auto;
 	}
 }

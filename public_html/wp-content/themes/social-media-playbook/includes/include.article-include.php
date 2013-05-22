@@ -1,5 +1,5 @@
 					<div class="content">
-						<div class="feature-pointer pointer">
+						<div class="feature-pointer pointer-a">
 							<div class="label">More Articles Like This</div>
 							<img src="<?php echo image_url(); ?>/the-social-media-playbook-pointer_1024.png">
 						</div>

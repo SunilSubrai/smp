@@ -52,14 +52,14 @@ Template Name: Navigation (Template 1)
 
 				<?php foreach(get_pages("sort_column=menu_order&exclude=8&hierarchical=0&parent=0") as $chapter) : ?>
 					<div class="chapter">
-						<div class="thumb">
+						<a href="<?php echo get_permalink($chapter->ID); ?>"><div class="thumb">
 							<div class="new">
 								<img src="<?php echo image_url(); ?>/new-label_1024.png" />
 							</div>
 							<img src="<?php echo image_url(); ?>/thumb-placeholder.jpg" />
-						</div>
+						</div></a>
 						<div class="description">
-							<h3><a href="#"><?php $x = explode(":", $chapter->post_title); echo trim($x[1]); ?></a></h3>
+							<h3><a href="<?php echo get_permalink($chapter->ID); ?>"><?php $x = explode(":", $chapter->post_title); echo trim($x[1]); ?></a></h3>
 							<p>
 								<?php echo $chapter->post_excerpt ?>
 							</p>

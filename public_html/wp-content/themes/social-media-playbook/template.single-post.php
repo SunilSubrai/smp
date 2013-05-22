@@ -34,9 +34,8 @@ Template Name: Single Post
 			<div class="column-one">
 
 					<div class="content">
-						<div class="title-pointer pointer">
+						<div class="title-pointer pointer-a">
 							<div class="label"><?php echo $post->post_title ?></div>
-							<img src="<?php echo image_url(); ?>/chapters-pointer_1024.png" />
 						</div>
 
 						<div class="sections">
@@ -62,9 +61,8 @@ Template Name: Single Post
 			<div class="column-two">
 
 					<div class="content">
-						<div class="feature-pointer pointer">
+						<div class="feature-pointer pointer-a">
 							<div class="label">@Accenture on Twitter</div>
-							<img src="<?php echo image_url(); ?>/the-social-media-playbook-pointer_1024.png">
 						</div>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -77,9 +75,8 @@ Template Name: Single Post
 					<div class="spacer"></div>
 
 					<div class="content">
-						<div class="feature-pointer pointer">
+						<div class="feature-pointer pointer-a">
 							<div class="label">Share this Article</div>
-							<img src="<?php echo image_url(); ?>/the-social-media-playbook-pointer_1024.png">
 						</div>
 						<h2><span class="awesome-icon icon-share-alt"></span> Via An Email</h2>
 						<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
