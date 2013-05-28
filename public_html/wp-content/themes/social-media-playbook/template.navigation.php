@@ -30,17 +30,32 @@ Template Name: Navigation (Template 1)
 				<div class="content">
 
 					<div class="the-social-media-playbook-pointer pointer-a">
-						<div class="label">The Social Media Playbook</div>
+						<div class="label"><?php echo $post->left_hand_box_heading ?></div>
 					</div>
 
-					<?php echo apply_filters("the_content", $post->post_content); ?>
-
+					<?php echo apply_filters("the_content", $post->introduction_text_area); ?>
+					
 				</div>
 
 			</div>
 
 			<div class="column-two">
 
+				<?php if($post->right_hand_intro_box_heading) : ?>
+
+					<div class="content">
+
+						<div class="chapters-pointer pointer-a">
+							<div class="label"><?php echo $post->right_hand_intro_box_heading ?></div>
+						</div>
+
+						<?php echo apply_filters("the_content", $post->post_content); ?>
+					
+					</div>
+
+					<div class="spacer"></div> 
+
+				<?php endif; ?>
 
 				<div class="content">
 

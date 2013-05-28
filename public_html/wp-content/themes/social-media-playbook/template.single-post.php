@@ -44,9 +44,9 @@ Template Name: Single Post
 
 						<div class="article-arrows">
 
-							<div class="left-arrow"><span class="arrow">l</span> <a href="<?php echo get_permalink(prev_page()) ?>">Previous Article</a></div>
+							<div class="left-arrow"><P><span class="arrow">l</span> <a href="<?php echo get_permalink(prev_page()) ?>">Previous Article</a></P></div>
 
-							<div class="right-arrow"><a href="<?php echo get_permalink(next_page()) ?>">Next Article</a> <span class="arrow">r</span></div>
+							<div class="right-arrow"><P><a href="<?php echo get_permalink(next_page()) ?>">Next Article</a> <span class="arrow">r</span></P></div>
 
 						</div>
 						
@@ -64,12 +64,12 @@ Template Name: Single Post
 						<div class="feature-pointer pointer-a">
 							<div class="label">@Accenture on Twitter</div>
 						</div>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
 					</div>
 
 					<div class="spacer"></div>
@@ -87,9 +87,9 @@ Template Name: Single Post
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
 						<form>
 							<input class="email-textbox" type="text" name="email">
-							<a href="#" class="share-button">
-								<img border="0" src="<?php echo image_url(); ?>/share-button_1024.png">
-							</a>
+						<a href="#" class=" button-a share-button">
+							<span class="arrow">r</span> <span class="label">Share</span>
+						</a>
 						</form>
 						<h2><span class="awesome-icon icon-file"></span> Via PDF</h2>
 						<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -98,8 +98,8 @@ Template Name: Single Post
 						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
-						<a href="#" class="download-pdf-button">
-							<img border="0" src="<?php echo image_url(); ?>/download-pdf-button_1024.png">
+						<a href="#" class=" button-a download-pdf-button">
+							<span class="arrow">r</span> <span class="label">Download PDF</span>
 						</a>
 					</div>
 

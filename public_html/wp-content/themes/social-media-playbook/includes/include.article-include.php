@@ -1,7 +1,6 @@
 					<div class="content">
 						<div class="feature-pointer pointer-a">
 							<div class="label">More Articles Like This</div>
-							<img src="<?php echo image_url(); ?>/the-social-media-playbook-pointer_1024.png">
 						</div>
 
 						<div class="articles-block more-articles">
@@ -38,8 +37,9 @@
 												<h3><a href="<?php echo get_permalink($article->ID) ?>"><?php echo $article->post_title ?></a></h3>
 												<p><?php echo $article->post_excerpt ?></p>
 											</div>
-											<a href="<?php echo get_permalink($article->ID) ?>" class="read-button">
-												<img border="0" src="<?php echo image_url(); ?>/read-button_1024.png">
+
+											<a href="<?php echo get_permalink($article->ID) ?>" class="button-a read-button">
+												<span class="arrow">r</span> <span class="label">Read</span>
 											</a>
 											
 											<div class="line"></div>

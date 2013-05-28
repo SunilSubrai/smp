@@ -23,7 +23,8 @@
 		<div id="menu" class="slide menu">
 			<div class="menu-content">
 				<div class="menu-banner">
-					<img src="<?php echo image_url(); ?>/accenture.jpg" alt="Accenture" height="97" width="147" />
+					<img id="menu-logo-desktop" src="<?php echo image_url(); ?>/logo-desktop.jpg" alt="Accenture"  />
+					<img id="menu-logo-mobile" src="<?php echo image_url(); ?>/logo-mobile.jpg" alt="Accenture"  />
 				</div>
 				<p class="menu-intro">Use this menu to navigate Chapters and Articles</p>
 				<a id="menu-close" class="button-a" href="#"><span class="arrow">l</span>Close</a>
@@ -42,9 +43,15 @@
 					<?php foreach($chapters as $chapter) :
 						$chapterID = $chapter->ID;
 
+						$thumbnail = get_field("page_heading_image_mobile", $chapterID);
+						
+						$thumbnailUrl = $thumbnail['url'];
+
 						$args2 = array(
 							'child_of' => $chapterID,
-							'title_li' => ''
+							'parent' => $chapterID,
+							'title_li' => '',
+							'hierarchical' => 0
 						);
 
 						$articles = get_pages($args2); ?>
@@ -52,7 +59,7 @@
 						<li class="menu-item">
 							<a class="menu-title" href="<?php echo $chapter->guid; ?>"><?php echo $chapter->post_title; ?></a>
 							<div class="menu-chapter-animate">
-								<img class="menu-thumbnail" src="<?php echo image_url(); ?>/thumb-placeholder.jpg" alt="" height="59" width="151" />
+								<div class="menu-thumbnail" style="background-image:url('<?php echo $thumbnailUrl; ?>')"></div>
 							</div>
 							
 							<?php if(count($articles) == 0) continue; ?>

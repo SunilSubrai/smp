@@ -36,5 +36,4 @@ $(function(){
 		$chapter.parent('.menu-item').toggleClass('menu-item-open');
 		$chapter.siblings('.article-list').slideToggle();
 	});
-
 });
