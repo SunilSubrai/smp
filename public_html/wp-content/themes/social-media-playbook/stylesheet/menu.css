@@ -66,13 +66,13 @@ nav {
 	border-top: solid 1px #eaeaec;
 }
 
-.menu-chapter a {
+.menu-title {
 	color: #2f539c;
 	font-weight: bold;
-	padding-right: 40px;
 	position: absolute;
 	top: 13px;
 	left: 160px;
+	width: 110px;
 }
 
 .menu-thumbnail {
@@ -87,7 +87,7 @@ nav {
 
 .article-list {
 	display: none;
-	padding: 16px 0 0 16px;
+	padding: 16px 32px 0 16px;
 }
 
 .article-list li {
@@ -97,8 +97,6 @@ nav {
 /* wrapper */
 #wrapper {
 	background-color: black;
-	height: 100%;
-	width: 100%;
 	opacity: 0.3;
 	position: absolute;
 	top: 0;

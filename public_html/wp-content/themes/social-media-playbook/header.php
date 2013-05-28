@@ -14,6 +14,9 @@
 	<!--[if IE 7]>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()."/stylesheet/ie7.css" ?>">
 	<![endif]-->
+	<!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()."/stylesheet/ie8.css" ?>">
+    <![endif]-->
 </head>
 <body <?php body_class(body_classes()) ?> id="page-body-id-<?php echo $post->ID ?>">
 	<div id="main-container">
@@ -26,30 +29,40 @@
 				<a id="menu-close" class="button-a" href="#"><span class="arrow">l</span>Close</a>
 				<nav>
 					<ul>
+
 					<?php 
-						$args1 = array(
-							'parent' => '0',
-							'exclude' => '8',
-							'sort_column' => 'menu_order'
-						);		
+					$args1 = array(
+						'parent' => '0',
+						'exclude' => '8',
+						'sort_column' => 'menu_order'
+					);		
 
-						$chapters = get_pages($args1); ?>
+					$chapters = get_pages($args1); ?>
 
-					<?php foreach($chapters as $chapter) : ?>
+					<?php foreach($chapters as $chapter) :
+						$chapterID = $chapter->ID;
+
+						$args2 = array(
+							'child_of' => $chapterID,
+							'title_li' => ''
+						);
+
+						$articles = get_pages($args2); ?>
+
 						<li class="menu-item">
-							<div class="menu-chapter">
+							<a class="menu-title" href="<?php echo $chapter->guid; ?>"><?php echo $chapter->post_title; ?></a>
+							<div class="menu-chapter-animate">
 								<img class="menu-thumbnail" src="<?php echo image_url(); ?>/thumb-placeholder.jpg" alt="" height="59" width="151" />
-								<a href=""><?php echo $chapter->post_title; ?></a>
 							</div>
-							<ul class="article-list">
-							<?php 
-								$args2 = array(
-									'child_of' => $chapter->ID,
-									'title_li' => ''
-								);
+							
+							<?php if(count($articles) == 0) continue; ?>
 
-								echo wp_list_pages($args2);
-							?>
+							<ul class="article-list">
+								<?php foreach($articles as $article) :
+									get_post_meta( $chapterID, '_wp_page_template', true ) == 'template.introduction-page.php' ? $url = $chapter->guid : $url = $article->guid; ?>
+
+									<li><a href="<?php echo $url; ?>"><?php echo $article->post_title;?></a></li>
+								<?php endforeach; ?>
 							</ul>
 						</li> 
 					<?php endforeach; ?>

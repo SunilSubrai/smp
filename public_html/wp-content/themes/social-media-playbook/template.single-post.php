@@ -104,5 +104,5 @@ Template Name: Single Post
 					</div>
 
 			</div>
-
+		</div>
 <?php get_footer() ?>

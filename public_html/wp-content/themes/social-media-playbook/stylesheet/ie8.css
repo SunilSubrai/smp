@@ -1,0 +1,44 @@
+/*.main-container
+{
+	width: 960px;
+}*/
+
+#banner
+{
+	width: 960px !important;
+}
+
+#menu-container
+{
+	width: 960px  !important;
+}
+
+.two-column
+{
+	width: 960px !important;
+}
+
+#header-container
+{
+	width: 960px;
+}
+
+.chapters-block, .articles-block
+{
+	width: 597px;
+}
+
+.row
+{
+	float: none !important;
+	width: 960px;
+}
+
+.narrower
+{
+	width: 636px !important;
+}
+/*.spacer
+{
+	width: 653px !important;
+}*/

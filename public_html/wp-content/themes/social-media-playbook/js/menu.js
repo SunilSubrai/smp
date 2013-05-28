@@ -10,7 +10,10 @@ $(function(){
 			$menu.addClass('shadow').animate({'left':'0'}, 700);
 		}
 
-		$('#wrapper').toggleClass('display-none');
+		var height = parseInt($(document).innerHeight()) + 'px';
+		var width = parseInt($(document).innerWidth()) + 'px';
+
+		$('#wrapper').css({'height':height,'width':width}).toggleClass('display-none');
 	});
 
 	$('#menu-close, #wrapper').on('click', function(e){
@@ -27,7 +30,7 @@ $(function(){
 		$('#wrapper').toggleClass('display-none');
 	});
 
-	$('.menu-chapter').on('click', function(e){
+	$('.menu-chapter-animate').on('click', function(e){
 		e.preventDefault();
 		var $chapter = $(this);
 		$chapter.parent('.menu-item').toggleClass('menu-item-open');
