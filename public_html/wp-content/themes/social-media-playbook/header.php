@@ -8,7 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri()."/style.css"; ?>" />
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri()."/js/jquery-1.7.2.min.js" ?>"></script>
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri()."/js/jquery.watermark.min.js" ?>"></script>	
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri()."/js/jquery.watermark.min.js" ?>"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri()."/js/jquery.multiple-bgs.min.js" ?>"></script>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri()."/js/core.js" ?>"></script>
 	<!--[if IE 7]>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()."/stylesheet/ie7.css" ?>">
