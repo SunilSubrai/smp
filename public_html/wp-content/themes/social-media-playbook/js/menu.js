@@ -34,19 +34,22 @@ $(function(){
 		e.preventDefault();
 		var $menuItem = $(this).parent('.menu-item');
 		var $articles = $(this).siblings('.article-list');
-		var $otherItems = $menuItem.siblings('.menu-item');
+		var $otherItems = $menuItem.siblings('.menu-item:not(.chapter-open)');
 		var $otherArticles = $otherItems.find('.article-list');
 		
+		if($menuItem.hasClass('chapter-open')) return false;
+
 		if($menuItem.hasClass('menu-item-open')) {
-		
+			
 			$menuItem.removeClass('menu-item-open');
 			$articles.slideUp();
-		
+
 		} else {
+
 			$otherArticles.slideUp('5000');
 			$articles.slideDown('5000');
 			$menuItem.addClass('menu-item-open');
-			$otherItems.removeClass('menu-item-open');
+			$otherItems.removeClass('menu-item-open');			
 		}		
 	});
 });
