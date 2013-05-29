@@ -109,6 +109,10 @@ nav {
 	padding-bottom: 12px;
 }
 
+.articles-open {
+	display: block;
+}
+
 /* wrapper */
 #wrapper {
 	background-color: black;
@@ -130,7 +134,6 @@ nav {
 /* media queries */
 @media all and (min-width: 1330px) {
 	#menu {
-		position: fixed;
     	left: 0;
   	}
 
