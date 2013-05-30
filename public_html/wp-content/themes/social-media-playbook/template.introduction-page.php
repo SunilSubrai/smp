@@ -55,7 +55,10 @@ Template Name: Introduction Page
 							<?php echo apply_filters("the_content", $article->post_content); ?>
 						</div>
 						<?php if($x == count($articles)) : ?>
-							<div class="right-arrow"><P><a href="#">Next Article</a> <span class="arrow">r</span></P></div>
+							<?php 
+								$chapterID = next_chapter_page(); 
+							?>
+							<div class="right-arrow"><P><a href="<?php echo get_permalink( $chapterID ); ?>">Next Article</a> <span class="arrow">r</span></P></div>
 						<?php endif; ?>
 					</div>
 

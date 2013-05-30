@@ -34,12 +34,14 @@ Template Name: Single Post
 			<div class="column-one">
 
 					<div class="content">
-						<div class="title-pointer pointer-a">
+						<div class="title-pointer pointer-b">
 							<div class="label"><?php echo $post->post_title ?></div>
 						</div>
 
 						<div class="sections">
-							<?php echo apply_filters("the_content", $post->post_content); ?>
+							<div class="section">
+								<?php echo apply_filters("the_content", $post->post_content); ?>
+							</div>
 						</div>
 
 						<div class="article-arrows">
@@ -80,11 +82,7 @@ Template Name: Single Post
 						</div>
 						<h2><span class="awesome-icon icon-share-alt"></span> Via An Email</h2>
 						<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+						tempor incididunt ut labore et dolore magna aliqua.</P>
 						<form>
 							<input class="email-textbox" type="text" name="email">
 						<a href="#" class=" button-a share-button">
@@ -93,11 +91,7 @@ Template Name: Single Post
 						</form>
 						<h2><span class="awesome-icon icon-file"></span> Via PDF</h2>
 						<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+						tempor incididunt ut labore et dolore magna aliqua.</P>
 						<a href="#" class=" button-a download-pdf-button">
 							<span class="arrow">r</span> <span class="label">Download PDF</span>
 						</a>

@@ -8,7 +8,9 @@
 				<?php
 					$pdf = (object) return_pdf();
 				?>
-				<a id="download-full-pdf-button" href="<?php echo $pdf->url ?>" title="Download Full PDF (<?php echo $pdf->title; ?>)"><img src="<?php echo image_url(); ?>/download-full-pdf-button_1024.png" border="0" /></a>
+<!-- 				<a class="button-b download-full-pdf-button" href="<?php echo $pdf->url ?>" title="(<?php echo $pdf->title; ?>)">
+					<span class="arrow">r</span><span class="label">Download Full PDF</span>
+				</a> -->
 			</div>
 
 			<?php

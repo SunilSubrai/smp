@@ -1,10 +1,11 @@
 jQuery(document).ready(function($) {
-	jQuery('.email-textbox').watermark('Enter email address');
+	jQuery('.email-textbox').watermark('Enter email address'); 
 });
 
 
 var tabber = {};
 tabber.tabs = [];
+tabber.currentScrollPos = 0;
 tabber.init = function(){
 	tabber.getTabs();
 }
@@ -63,9 +64,15 @@ tabber.showContent = function(id){
 	}
 }
 tabber.scrollToElement = function(id){
-	 $('html, body').animate({
-         scrollTop: $('.'+id).offset().top -40
-     }, 2000);
+	if(tabber.currentScrollPos!=$(window).scrollTop())
+	{
+		trace('scrolling')
+		 $('html, body').animate({
+		     scrollTop: $('.'+id).offset().top -40
+		 }, 2000);
+		 trace( tabber.currentScrollPos , $(window).scrollTop());
+		 tabber.currentScrollPos = $(window).scrollTop();
+	}
 }
 function trace(){
    var args = Array.prototype.slice.call( arguments );

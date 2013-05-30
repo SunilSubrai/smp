@@ -55,13 +55,19 @@ Template Name: Navigation Article (Template 2)
 				<div class="chapters-block">	
 
 				<?php foreach(get_pages("sort_column=menu_order&exclude=5&hierarchical=0&parent=$post->ID") as $chapter) : ?>
+					<?php 
+					$chapterID = $chapter->ID;
+					$thumbnail = get_field("post_heading", $chapterID);
+					$thumbnailUrl = $thumbnail['url']; 
+					?>
 					<div class="chapter">
 						<a href="<?php echo get_permalink($chapter->ID); ?>"><div class="thumb">
 							<div class="new">
 								<img src="<?php echo image_url(); ?>/new-label_1024.png" />
 							</div>
-							<img src="<?php echo image_url(); ?>/thumb-placeholder.jpg" />
-						</div></a>
+							<div class="thumbnail" style="background-image:url('<?php echo $thumbnailUrl; ?>')"></div>
+						</div>
+						</a>
 						<div class="description">
 							<h3><a href="<?php echo get_permalink($chapter->ID); ?>"><?php echo $chapter->post_title; ?></a></h3>
 							<p>

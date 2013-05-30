@@ -69,6 +69,28 @@
 		return return_next_prev_pages()->prev;
 	}
 
+	function return_next_prev_chapter_pages(){
+		$pagelist = get_pages('sort_column=menu_order&parent=0&sort_order=asc');
+		$pages = array();
+		foreach ($pagelist as $page) {
+		   $pages[] += $page->ID;
+		}
+
+		$current = array_search(get_the_ID(), $pages);
+		$prevID = $pages[$current-1];
+		$nextID = $pages[$current+1];		
+
+		return (object) array("next" => $nextID, "prev" => $prevID);
+	}
+
+	function next_chapter_page(){
+		return return_next_prev_chapter_pages()->next;
+	}
+
+	function prev_chapter_page(){
+		return return_next_prev_chapter_pages()->prev;
+	}
+
 	//post types
 	add_action( 'init', 'create_post_type_miscellaneous' );
 	function create_post_type_miscellaneous() {
@@ -84,7 +106,18 @@
 		);
 	}
 
-
+	function enable_more_buttons($buttons) {
+	  $buttons[] = 'hr';
+	 
+	  /* 
+	  Repeat with any other buttons you want to add, e.g.
+		  $buttons[] = 'fontselect';
+		  $buttons[] = 'sup';
+	  */
+	 
+	  return $buttons;
+	}
+	add_filter("mce_buttons", "enable_more_buttons");
 
 
 

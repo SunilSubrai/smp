@@ -66,12 +66,19 @@ Template Name: Navigation (Template 1)
 				<div class="chapters-block">
 
 				<?php foreach(get_pages("sort_column=menu_order&exclude=8&hierarchical=0&parent=0") as $chapter) : ?>
+					<?php 
+					$chapterID = $chapter->ID;
+					$thumbnail = get_field("page_heading_image_mobile", $chapterID);
+					$thumbnailUrl = $thumbnail['url']; 
+					?>
 					<div class="chapter">
 						<a href="<?php echo get_permalink($chapter->ID); ?>"><div class="thumb">
 							<div class="new">
 								<img src="<?php echo image_url(); ?>/new-label_1024.png" />
+
 							</div>
-							<img src="<?php echo image_url(); ?>/thumb-placeholder.jpg" />
+							<div class="thumbnail" style="background-image:url('<?php echo $thumbnailUrl; ?>')">
+							</div>
 						</div></a>
 						<div class="description">
 							<h3><a href="<?php echo get_permalink($chapter->ID); ?>"><?php $x = explode(":", $chapter->post_title); echo trim($x[1]); ?></a></h3>

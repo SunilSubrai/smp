@@ -21,6 +21,8 @@
 										if(count($articles) == $i) 
 											$last = true;
 							?>
+
+
 										<div class="article<?php if($last) echo ' last' ?>">
 											<div class="thumb">
 												<div class="new">
@@ -31,7 +33,8 @@
 													$url 	= $x["url"];
 													$alt  	= $x["alt"];
 												?>
-												<img src="<?php echo $url; ?>" alt="<?php echo $alt ?>" />
+												<!-- <img src="<?php echo $url; ?>" alt="<?php echo $alt ?>" /> -->
+												<div class="thumbnail" style="background-image:url('<?php echo $url; ?>')"></div>
 											</div>
 											<div class="description">
 												<h3><a href="<?php echo get_permalink($article->ID) ?>"><?php echo $article->post_title ?></a></h3>
